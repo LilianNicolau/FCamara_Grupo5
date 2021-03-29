@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from "dotenv";
 import { AddressInfo } from "net";
 import { schoolSignup } from './Endpoints/schoolSignup';
+import { findSchoolByAddress } from './Endpoints/getSchoolByAddress';
 
 
 const app = express();
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(cors());
 
 app.post("/school/signup", schoolSignup);
+app.get("/school/find", findSchoolByAddress)
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {

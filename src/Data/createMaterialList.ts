@@ -5,7 +5,7 @@ export const createMaterialList = async (materialList: materialList):Promise<voi
     await connection
         .insert({
             id:materialList.id,
-            name:materialList.name
-            
+            name:materialList.name,
         }).into("FCamara_Projeto_MaterialList")
 }
+

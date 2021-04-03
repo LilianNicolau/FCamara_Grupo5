@@ -1,10 +1,10 @@
 import {connection} from "../DatabaseConnection/DatabaseConnection";
 
-export const getMaterialListByName = async(name: string):Promise<any> =>{
+export const getMaterialListById = async(id: string):Promise<any> =>{
     const result = await connection
         .select("*")
         .from("FCamara_Projeto_MaterialList")
-        .where({name})
+        .where({id})
     
     return result[0]
 }

@@ -2,29 +2,32 @@ import {Request,Response} from "express";
 import { generateId } from "../Services/IdGenerator";
 import { generateToken } from "../Services/Authenticator";
 import {createStudent} from "../Data/createStudent";
-import {getStudentBySchool} from "../Data/getStudent";
 import {student} from "../Types/types";
 
 let errorCode = 400
 
 export const studentSignup = async(req: Request, res: Response): Promise <void> => {
     try {
-        const {name, school} = req.body as student
+        const {name, school_name} = req.body as student
 
-        if(!name || !school) {
-            errorCode = 403
+        if(!name || !school_name) {
+            
             throw new Error("Por favor, digite as informações.");
         }
 
-        const findSchool = getStudentBySchool(school)
-        console.log("school:", findSchool)
-        
+        // const findSchool = getStudentBySchool(school_name)
+        // if (!findSchool) {
+        //     throw new Error("Aluna/Aluno não encontrada/encontrado")
+        // }
+                
         const studentId: string = generateId()
+
         const studentData:student = {
             id:studentId,
             name:name,
-            school:school,
+            school_name: school_name,
         }
+
         await createStudent(studentData)
         const token: string = generateToken({id:studentId})
 

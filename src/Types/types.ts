@@ -1,7 +1,7 @@
 export type student = {
     id: string,
     name: string,
-    school_id:string,    
+    school_name:string,    
 }
 
 export type school = {

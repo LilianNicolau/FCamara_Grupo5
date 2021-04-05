@@ -36,15 +36,20 @@ o projeto foi desenvolvido usando as seguintes tecnologias:
 ---
 
 ## 🚀 Tecnologias utilizadas no front-end:
-
+- HTML
+- CSS
 
 ## 💾 Como baixar o projeto
 
 - Primeiro instale o [Git](https://git-scm.com/), [Node.jS](https://nodejs.org/pt-br/download/) + [npm](https://www.npmjs.com/get-npm)
 
-```bash
+```
 # Clonar o repositório
-git clone 
+git clone (https://github.com/LilianNicolau/FCamara_Grupo5.git)
+
+# Membros grupo 5
+André Barreiro, Erica Neres, Lilian Nicolau, Vanessa Sousa e Victória Santana.
+
 
 
 

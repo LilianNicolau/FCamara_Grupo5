@@ -7,6 +7,8 @@ import { findSchoolByAddress, findSchoolByName } from './Endpoints/getSchoolByAd
 import { studentSignup } from './Endpoints/studentSignup';
 import { materialListSignup } from './Endpoints/materialSignup';
 import { findMaterialListById } from './Endpoints/getMaterialListById';
+import { findStudentByName } from './Endpoints/getStudentByName';
+import { postBusinessContact } from './Endpoints/createBusinessContact';
 
 
 const app = express();
@@ -19,8 +21,10 @@ app.post("/school/signup", schoolSignup);
 app.get("/school/find", findSchoolByAddress);
 app.get("/school/findName", findSchoolByName);
 app.post("/student/signup", studentSignup);
+app.get("/student/find", findStudentByName)
 app.post("/material/list", materialListSignup);
-app.get("/materials", findMaterialListById)
+app.get("/materials", findMaterialListById);
+app.post("/company", postBusinessContact);
 
 const server = app.listen(process.env.PORT || 3003, () => {
     if (server) {

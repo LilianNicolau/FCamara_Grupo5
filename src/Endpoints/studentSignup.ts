@@ -8,9 +8,9 @@ let errorCode = 400
 
 export const studentSignup = async(req: Request, res: Response): Promise <void> => {
     try {
-        const {name, school_name} = req.body as student
+        const {school_name, name, name_legal_guardian, cpf, cad_unico} = req.body as student
 
-        if(!name || !school_name) {
+        if(!school_name || !name || !name_legal_guardian || !cpf || !cad_unico) {
             
             throw new Error("Por favor, digite as informações.");
         }
@@ -24,8 +24,12 @@ export const studentSignup = async(req: Request, res: Response): Promise <void> 
 
         const studentData:student = {
             id:studentId,
-            name:name,
             school_name: school_name,
+            name:name,
+            name_legal_guardian: name_legal_guardian,
+            cpf: cpf,
+            cad_unico: cad_unico
+            
         }
 
         await createStudent(studentData)

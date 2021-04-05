@@ -1,8 +1,8 @@
 ```jsx
 
-<h1 align="center">
-    Projeto FCamara 2021 - Lista do Bem 
-</h1>
+
+### Projeto FCamara 2021 - Lista do Bem 
+
 
 # Índice
 
@@ -44,10 +44,11 @@ o projeto foi desenvolvido usando as seguintes tecnologias:
 - Primeiro instale o [Git](https://git-scm.com/), [Node.jS](https://nodejs.org/pt-br/download/) + [npm](https://www.npmjs.com/get-npm)
 
 ```
-# Clonar o repositório
+- Clonar o repositório
 git clone (https://github.com/LilianNicolau/FCamara_Grupo5.git)
 
-# Membros grupo 5
+```
+- Membros grupo 5
 André Barreiro, Erica Neres, Lilian Nicolau, Vanessa Sousa e Victória Santana.
 
 
